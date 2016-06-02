@@ -1,0 +1,24 @@
+<h1>Books</h1>
+
+ <table class="table table-bordered table-striped">
+   <thead>
+     <tr>
+       <th>Books</th>
+       <th>Name</th>
+     </tr>
+   </thead>
+   <tbody>
+     {{#each model as |book|}}
+       <tr>
+         <td>{{book.title}}</td>
+         <td>
+           <ul>
+             {{#each author.books as |author|}}
+               <li>{{book.author.name}}</li>
+             {{/each}}
+           </ul>
+         </td>
+       </tr>
+     {{/each}}
+   </tbody>
+ </table>
